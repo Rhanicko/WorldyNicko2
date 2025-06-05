@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wordly - Shaping young students through storytelling, poems, and phonetics. An interactive educational platform for children.">
+    <meta name="keywords" content="children stories, educational, phonetics, poems, learning, kids">
+    <meta name="author" content="Wordly Educational Platform">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Wordly - Shaping Young Students">
+    <meta property="og:description" content="Discover magical tales and educational content for children">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wordly.education">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/logo.png">
+    
+    <title>Wordly - Home | Educational Stories & Learning</title>
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" as="style">
+    
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="global.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress"></div>
+    
+    <header>
+        <div class="header-content">
+            <div id="project_details">
+                <img src="img/logo.png" alt="Wordly Logo">
+                <h2>Wordly</h2>
+            </div>
+            <div class="nav-container">
+                <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰ Menu</button>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                        <li><a href="books.html">Story Books</a></li>
+                        <li><a href="poems.html">Poems</a></li>
+                        <li><a href="phonetics.html">Phonetics</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home">
+            <!-- Animated Background Particles -->
+            <div class="particles-container">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+
+            <div id="preloader" class="hidden">
+                <div class="overlay">
+                    <video id="preloader-video" src="../preloader.mp4" muted autoplay></video>
+                </div>
+            </div>
+
+            <div class="hero-wrapper">
+                <div class="project_description">
+                    <h1 id="brand">Shaping Young <br>Students,</h1>
+                    <h3>One Book at a Time.</h3>
+                    <p>Nurturing emotional intelligence and inspiring confidence, adaptability, and mindfulness through the magic of storytelling and interactive learning.</p>
+                    
+                    <div class="cta-container">
+                        <a href="books.html" class="cta-button cta-primary">
+                            📚 Explore Stories
+                        </a>
+                        <a href="poems.html" class="cta-button cta-secondary">
+                            📝 Read Poems
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-illustration">
+                        <div class="illustration-content">
+                            <div class="illustration-emoji">📖</div>
+                            <div class="illustration-text">Interactive Learning</div>
+                            <div class="illustration-subtext">Stories • Poems • Phonetics</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="features-container">
+                <h2 class="features-title">Why Choose Wordly?</h2>
+                <div class="features-grid">
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">🎭</div>
+                        <h3 class="feature-title">Interactive Stories</h3>
+                        <p class="feature-description">Engaging tales that teach valuable life lessons through memorable characters and exciting adventures.</p>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">🎨</div>
+                        <h3 class="feature-title">Beautiful Poems</h3>
+                        <p class="feature-description">Carefully curated poetry that sparks imagination and develops language appreciation in young minds.</p>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">🔤</div>
+                        <h3 class="feature-title">Phonetics Learning</h3>
+                        <p class="feature-description">Fun and effective phonetics exercises that build strong reading foundations through animal-themed learning.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="stats-container">
+                <div class="stat-item animate-on-scroll">
+                    <div class="stat-number">4+</div>
+                    <div class="stat-label">Interactive Stories</div>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <div class="stat-number">12+</div>
+                    <div class="stat-label">Beautiful Poems</div>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <div class="stat-number">26</div>
+                    <div class="stat-label">Phonetic Animals</div>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Learning Fun</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Screen Reader Only Content -->
+    <div class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

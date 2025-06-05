@@ -1,0 +1,213 @@
+* {
+  overflow-y: visible;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(255, 255, 255);
+  font-family: "Quicksand", sans-serif;
+  overflow-y: visible;
+  margin: 0;
+  height: 100vh;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+}
+
+.story-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: rgb(248, 248, 248);
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.story-content {
+  overflow-y: scroll;
+  height: 100%;
+  background: white;
+  padding: 3%;
+  margin-top: 0;
+  display: block;
+  justify-content: center;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc #f5f5f5;
+}
+
+.story-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.story-content::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+.story-content::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.inner {
+  width: 95%;
+  max-width: 800px;
+  padding: 5%;
+  margin: 0 auto;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.05) inset;
+  overflow: hidden;
+  color: #333;
+  display: block;
+  border-radius: 10px;
+  font-family: "Goudy Bookletter 1911", Georgia, "Times New Roman", Times, serif;
+  border: solid #eee 1px;
+  background-color: #fff;
+  animation: fadeIn 1s ease;
+}
+
+.story-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 36px;
+  font-family: "Fraunces", serif;
+  font-weight: normal;
+  line-height: 1.2;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.story-container h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #4c1036;
+}
+
+.story-content p {
+  margin-bottom: 20px;
+  font-family: "Goudy Bookletter 1911", Georgia, serif;
+  text-align: left;
+  display: flex;
+  width: 100%;
+  color: #444;
+  font-size: 20px;
+  text-indent: 50px;
+  justify-content: center;
+  letter-spacing: 0.5px;
+  align-items: center;
+  line-height: 1.8;
+}
+
+p img {
+  display: block;
+  padding: 20px;
+  max-width: 100%;
+  border-radius: 8px;
+  min-width: 50%;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+p img:hover {
+  transform: scale(1.02);
+}
+
+.buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.buttons a {
+  color: #4c1036;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Quicksand", sans-serif;
+}
+
+.buttons a:hover {
+  color: #333;
+  text-decoration: underline;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #4c1036;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 2px solid #4c1036;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+}
+
+.btn-outline:hover {
+  color: #fff;
+  background-color: #4c1036;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Add animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Improve responsiveness */
+@media screen and (max-width: 768px) {
+  .story-content p {
+    display: block;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .inner {
+    width: 100%;
+    padding: 5% 3%;
+  }
+
+  .story-container h2 {
+    font-size: 28px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .btn-outline {
+    width: 100%;
+    text-align: center;
+  }
+}

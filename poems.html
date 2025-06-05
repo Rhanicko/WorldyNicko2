@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover beautiful poems for children at Wordly - Interactive poetry collection with classic and modern verses">
+    <meta name="keywords" content="children poems, poetry, kids literature, educational poems, classic verses">
+    <title>Wordly - Poetry Garden | Beautiful Poems for Kids</title>
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" as="style">
+    
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="poem.css">
+</head>
+<body>
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress"></div>
+    
+    <header>
+        <div class="header-content">
+            <div id="project_details">
+                <img src="../img/logo.png" alt="Wordly Logo">
+                <h2>Wordly</h2>
+            </div>
+            <div class="nav-container">
+                <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰ Menu</button>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="books.html">Story Books</a></li>
+                        <li><a href="poems.html" class="active" aria-current="page">Poems</a></li>
+                        <li><a href="phonetics.html">Phonetics</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="poems_main">
+        <div id="preloader" class="hidden">
+            <div class="overlay">
+                <video id="preloader-video" src="../preloader.mp4" muted autoplay></video>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="poetry-hero">
+            <div class="hero-content">
+                <h1 class="hero-title">🌸 Poetry Garden</h1>
+                <p class="hero-subtitle">Explore beautiful verses that spark imagination and touch the heart. Each poem is a magical journey waiting to be discovered!</p>
+                <div class="hero-stats">
+                    <div class="stat-badge">
+                        <span class="stat-number">12+</span>
+                        <span class="stat-label">Beautiful Poems</span>
+                    </div>
+                    <div class="stat-badge">
+                        <span class="stat-number">📚</span>
+                        <span class="stat-label">Classic Authors</span>
+                    </div>
+                    <div class="stat-badge">
+                        <span class="stat-number">🎭</span>
+                        <span class="stat-label">Different Themes</span>
+                    </div>
+                </div>
+            </div>
+            <div class="floating-elements">
+                <div class="floating-element">🌸</div>
+                <div class="floating-element">📖</div>
+                <div class="floating-element">✨</div>
+                <div class="floating-element">🦋</div>
+            </div>
+        </section>
+
+        <!-- Search and Filter Section -->
+        <section class="search-section">
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="poem-search" placeholder="Search for a poem or author..." aria-label="Search poems">
+                    <div class="search-icon">🔍</div>
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="all">🌟 All Poems</button>
+                    <button class="filter-btn" data-category="nature">🌳 Nature</button>
+                    <button class="filter-btn" data-category="animals">🐾 Animals</button>
+                    <button class="filter-btn" data-category="adventure">🗺️ Adventure</button>
+                    <button class="filter-btn" data-category="friendship">💝 Friendship</button>
+                    <button class="filter-btn" data-category="seasons">🍂 Seasons</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Poems Grid -->
+        <section class="poems-section">
+            <div class="poems-container">
+                <!-- Nature Poems -->
+                <article class="poem-card" data-category="nature" role="button" tabindex="0" aria-label="Read Trees poem">
+                    <div class="poem-header">
+                        <div class="poem-icon">🌳</div>
+                        <div class="poem-category">Nature</div>
+                    </div>
+                    <div class="poem-content">
+                        <h3 class="poem-title">Trees</h3>
+                        <p class="poem-author">by Joyce Kilmer</p>
+                        <div class="poem-preview">
+                            <p>I think that I shall never see<br>
+                            A poem lovely as a tree...</p>
+                        </div>
+                        <div class="poem-full hidden">
+                            <p>I think that I shall never see<br>
+                            A poem lovely as a tree.</p>
+
+                            <p>A tree whose hungry mouth is prest<br>
+                            Against the earth's sweet flowing breast;</p>
+
+                            <p>A tree that looks at God all day,<br>
+                            And lifts her leafy arms to pray;</p>
+
+                            <p>A tree that may in Summer wear<br>
+                            A nest of robins in her hair;</p>
+
+                            <p>Upon whose bosom snow has lain;<br>
+                            Who intimately lives with rain.</p>
+
+                            <p>Poems are made by fools like me,<br>
+                            But only God can make a tree.</p>
+                        </div>
+                        <div class="poem-tags">
+                            <span class="tag">Nature</span>
+                            <span class="tag">Beauty</span>
+                            <span class="tag">Classic</span>
+                        </div>
+                    </div>
+                    <div class="poem-actions">
+                        <button class="read-btn">📖 Read Full Poem</button>
+                    </div>
+                </article>
+
+                <article class="poem-card" data-category="nature" role="button" tabindex="0" aria-label="Read The Rainbow poem">
+                    <div class="poem-header">
+                        <div class="poem-icon">🌈</div>
+                        <div class="poem-category">Nature</div>
+                    </div>
+                    <div class="poem-content">
+                        <h3 class="poem-title">The Rainbow</h3>
+                        <p class="poem-author">by Christina Rossetti</p>
+                        <div class="poem-preview">
+                            <p>Boats sail on the rivers,<br>
+                            And ships sail on the seas...</p>
+                        </div>
+                        <div class="poem-full hidden">
+                            <p>Boats sail on the rivers,<br>
+                            And ships sail on the seas;<br>
+                            But clouds that sail across the sky<br>
+                            Are prettier far than these.</p>
+
+                            <p>There are bridges on the rivers,<br>
+                            As pretty as you please;<br>
+                            But the bow that bridges heaven,<br>
+                            And over tops the trees,<br>
+                            And builds a road from earth to sky,<br>
+                            Is prettier far than these.</p>
+                        </div>
+                        <div class="poem-tags">
+                            <span class="tag">Rainbow</span>
+                            <span class="tag">Sky</span>
+                            <span class="tag">Beauty</span>
+                        </div>
+                    </div>
+                    <div class="poem-actions">
+                        <button class="read-btn">📖 Read Full Poem</button>
+                    </div>
+                </article>
+
+                <!-- Adventure Poems -->
+                <article class="poem-card" data-category="adventure" role="button" tabindex="0" aria-label="Read From a Railway Carriage poem">
+                    <div class="poem-header">
+                        <div class="poem-icon">🚂</div>
+                        <div class="poem-category">Adventure</div>
+                    </div>
+                    <div class="poem-content">
+                        <h3 class="poem-title">From a Railway Carriage</h3>
+                        <p class="poem-author">by Robert Louis Stevenson</p>
+                        <div class="poem-preview">
+                            <p>Faster than fairies, faster than witches,<br>
+                            Bridges and houses, hedges and ditches...</p>
+                        </div>
+                        <div class="poem-full hidden">
+                            <p>Faster than fairies, faster than witches,<br>
+                            Bridges and houses, hedges and ditches;</p>
+
+                            <p>Charging along like troops in a battle<br>
+                            All through the meadows the horses and cattle:</p>
+
+                            <p>All of the sights of the hill and the plain<br>
+                            Fly as thick as driving rain;</p>
+
+                            <p>And ever again, in the wink of an eye,<br>
+                            Painted stations whistle by.</p>
+
+                            <p>Here is a child who clambers and scrambles,<br>
+                            All by himself and gathering brambles;</p>
+
+                            <p>Here is a tramp who stands and gazes;<br>
+                            And here is the green for stringing the daisies!</p>
+
+                            <p>Here is a cart run away in the road<br>
+                            Lumping along with man and load;</p>
+
+                            <p>And here is a mill, and there is a river:<br>
+                            Each a glimpse and gone forever!</p>
+                        </div>
+                        <div class="poem-tags">
+                            <span class="tag">Travel</span>
+                            <span class="tag">Speed</span>
+                            <span class="tag">Adventure</span>
+                        </div>
+                    </div>
+                    <div class="poem-actions">
+                        <button class="read-btn">📖 Read Full Poem</button>
+                    </div>
+                </article>
+
+                <article class="poem-card" data-category="friendship" role="button" tabindex="0" aria-label="Read Now We Are Six poem">
+                    <div class="poem-header">
+                        <div class="poem-icon">🎂</div>
+                        <div class="poem-category">Growing Up</div>
+                    </div>
+                    <div class="poem-content">
+                        <h3 class="poem-title">Now We Are Six</h3>
+                        <p class="poem-author">by A. A. Milne</p>
+                        <div class="poem-preview">
+                            <p>When I was One, I had just begun.<br>
+                            When I was Two, I was nearly new...</p>
+                        </div>
+                        <div class="poem-full hidden">
+                            <p>When I was One,<br>
+                            I had just begun.<br>
+                            When I was Two,<br>
+                            I was nearly new.<br>
+                            When I was Three<br>
+                            I was hardly me.<br>
+                            When I was Four,<br>
+                            I was not much more.<br>
+                            When I was Five,<br>
+                            I was just alive.<br>
+                            But now I am Six,<br>
+                            I'm as clever as clever,<br>
+                            So I think I'll be six now for ever and ever.</p>
+                        </div>
+                        <div class="poem-tags">
+                            <span class="tag">Growing Up</span>
+                            <span class="tag">Age</span>
+                            <span class="tag">Childhood</span>
+                        </div>
+                    </div>
+                    <div class="poem-actions">
+                        <button class="read-btn">📖 Read Full Poem</button>
+                    </div>
+                </article>
+
+                <!-- Animals Poems -->
+                <article class="poem-card" data-category="animals" role="button" tabindex="0" aria-label="Read The Owl and the Pussy-Cat poem">
+                    <div class="poem-header">
+                        <div class="poem-icon">🦉</div>
+                        <div class="poem-category">Animals</div>
+                    </div>
+                    <div class="poem-content">
+                        <h3 class="poem-title">The Owl and the Pussy-Cat</h3>
+                        <p class="poem-author">by Edward Lear</p>
+                        <div class="poem-preview">
+                            <p>The Owl and the Pussy-cat went to sea<br>
+                            In a beautiful pea-green boat...</p>
+                        </div>
+                        <div class="poem-full hidden">
+                            <p>The Owl and the Pussy-cat went to sea<br>
+                            In a beautiful pea-green boat,<br>
+                            They took some honey, and plenty of money,<br>
+                            Wrapped up in a five-pound note.</p>
+
+                            <p>The Owl looked up to the stars above,<br>
+                            And sang to a small guitar,<br>
+                            "O lovely Pussy! O Pussy, my love,<br>
+                            What a beautiful Pussy you are,<br>
+                            You are, You are!<br>
+                            What a beautiful Pussy you are!"</p>
+
+                            <p>Pussy said to the Owl, "You elegant fowl!<br>
+                            How charmingly sweet you sing!<br>
+                            O let us be married! too long we have tarried:<br>
+                            But what shall we do for a ring?"</p>
+
+                            <p>They sailed away, for a year and a day,<br>
+                            To the land where the Bong-Tree grows<br>
+                            And there in a wood a Piggy-wig stood<br>
+                            With a ring at the end of his nose,<br>
+                            His nose, His nose,<br>
+                            With a ring at the end of his nose.</p>
+                        </div>
+                        <div class="poem-tags">
+                            <span class="tag">Animals</span>
+                            <span class="tag">Adventure</span>
+                            <span class="tag">Nonsense</span>
+                        </div>
+                    </div>
+                    <div class="poem-actions">
+                        <button class="read-btn">📖 Read Full Poem</button>
+                    </div>
+                </article>
+
+                <article class="poem-card" data-category="animals" role="button" tabindex="0" aria-label="Read The Cat and the Fiddle poem">
+                    <div class="poem-header">
+                        <div class="poem-icon">🐱</div>
+                        <div class="poem-category">Animals</div>
+                    </div>
+                    <div class="poem-content">
+                        <h3 class="poem-title">Hey Diddle Diddle</h3>
+                        <p class="poem-author">Traditional Nursery Rhyme</p>
+                        <div class="poem-preview">
+                            <p>Hey diddle diddle,<br>
+                            The cat and the fiddle...</p>
+                        </div>
+                        <div class="poem-full hidden">
+                            <p>Hey diddle diddle,<br>
+                            The cat and the fiddle,<br>
+                            The cow jumped over the moon;<br>
+                            The little dog laughed<br>
+                            To see such sport,<br>
+                            And the dish ran away with the spoon.</p>
+                        </div>
+                        <div class="poem-tags">
+                            <span class="tag">Animals</span>
+                            <span class="tag">Nursery Rhyme</span>
+                            <span class="tag">Fun</span>
+                        </div>
+                    </div>
+                    <div class="poem-actions">
+                        <button class="read-btn">📖 Read Full Poem</button>
+                    </div>
+                </article>
+
+                <!-- Seasons Poems -->
+                <article class="poem-card" data-category="seasons" role="button" tabindex="0" aria-label="Read Autumn Leaves poem">
+                    <div class="poem-header">
+                        <div class="poem-icon">🍂</div>
+                        <div class="poem-category">Seasons</div>
+                    </div>
+                    <div class="poem-content">
+                        <h3 class="poem-title">Autumn Leaves</h3>
+                        <p class="poem-author">by Unknown</p>
+                        <div class="poem-preview">
+                            <p>Red and yellow, orange and brown,<br>
+                            Autumn leaves come tumbling down...</p>
+                        </div>
+                        <div class="poem-full hidden">
+                            <p>Red and yellow, orange and brown,<br>
+                            Autumn leaves come tumbling down.<br>
+                            Swirling, whirling all around,<br>
+                            Dancing gently to the ground.</p>
+
+                            <p>Crispy, crunchy beneath my feet,<br>
+                            Autumn's carpet, oh so neat!<br>
+                            Piles of leaves so high and deep,<br>
+                            Perfect for a jumping leap!</p>
+
+                            <p>Soon the trees will bare and stark,<br>
+                            Winter's coming, cold and dark.<br>
+                            But for now, let's laugh and play<br>
+                            In the leaves of autumn's day.</p>
+                        </div>
+                        <div class="poem-tags">
+                            <span class="tag">Autumn</span>
+                            <span class="tag">Leaves</span>
+                            <span class="tag">Seasons</span>
+                        </div>
+                    </div>
+                    <div class="poem-actions">
+                        <button class="read-btn">📖 Read Full Poem</button>
+                    </div>
+                </article>
+
+                <article class="poem-card" data-category="seasons" role="button" tabindex="0" aria-label="Read Winter Wonderland poem">
+                    <div class="poem-header">
+                        <div class="poem-icon">❄️</div>
+                        <div class="poem-category">Seasons</div>
+                    </div>
+                    <div class="poem-content">
+                        <h3 class="poem-title">Winter Wonderland</h3>
+                        <p class="poem-author">by Sarah Johnson</p>
+                        <div class="poem-preview">
+                            <p>Snowflakes dancing in the air,<br>
+                            Winter magic everywhere...</p>
+                        </div>
+                        <div class="poem-full hidden">
+                            <p>Snowflakes dancing in the air,<br>
+                            Winter magic everywhere.<br>
+                            Sparkling white on every tree,<br>
+                            Beautiful as beautiful can be.</p>
+
+                            <p>Children bundled warm and tight,<br>
+                            Playing in the snowy white.<br>
+                            Building snowmen, having fun,<br>
+                            Until the winter day is done.</p>
+
+                            <p>Icicles hang from the roof,<br>
+                            Nature's crystal, winter proof.<br>
+                            Hot cocoa steaming in my cup,<br>
+                            Winter warms my spirit up!</p>
+                        </div>
+                        <div class="poem-tags">
+                            <span class="tag">Winter</span>
+                            <span class="tag">Snow</span>
+                            <span class="tag">Magic</span>
+                        </div>
+                    </div>
+                    <div class="poem-actions">
+                        <button class="read-btn">📖 Read Full Poem</button>
+                    </div>
+                </article>
+
+                <!-- Friendship Poems -->
+                <article class="poem-card" data-category="friendship" role="button" tabindex="0" aria-label="Read A Friend Like You poem">
+                    <div class="poem-header">
+                        <div class="poem-icon">💝</div>
+                        <div class="poem-category">Friendship</div>
+                    </div>
+                    <div class="poem-content">
+                        <h3 class="poem-title">A Friend Like You</h3>
+                        <p class="poem-author">by Emma Wilson</p>
+                        <div class="poem-preview">
+                            <p>A friend like you is hard to find,<br>
+                            Someone who's caring, sweet, and kind...</p>
+                        </div>
+                        <div class="poem-full hidden">
+                            <p>A friend like you is hard to find,<br>
+                            Someone who's caring, sweet, and kind.<br>
+                            You listen when I need to talk,<br>
+                            And join me on my daily walk.</p>
+
+                            <p>We laugh together, play together,<br>
+                            Through any kind of stormy weather.<br>
+                            You share your toys and share your snacks,<br>
+                            And always have my back.</p>
+
+                            <p>A friend like you makes every day<br>
+                            More bright and cheerful in every way.<br>
+                            I'm grateful for your friendship true,<br>
+                            I'm lucky to have a friend like you!</p>
+                        </div>
+                        <div class="poem-tags">
+                            <span class="tag">Friendship</span>
+                            <span class="tag">Kindness</span>
+                            <span class="tag">Love</span>
+                        </div>
+                    </div>
+                    <div class="poem-actions">
+                        <button class="read-btn">📖 Read Full Poem</button>
+                    </div>
+                </article>
+
+                <!-- Nature Poems -->
+                <article class="poem-card" data-category="nature" role="button" tabindex="0" aria-label="Read The Sun poem">
+                    <div class="poem-header">
+                        <div class="poem-icon">☀️</div>
+                        <div class="poem-category">Nature</div>
+                    </div>
+                    <div class="poem-content">
+                        <h3 class="poem-title">The Friendly Sun</h3>
+                        <p class="poem-author">by Robert Thompson</p>
+                        <div class="poem-preview">
+                            <p>The sun wakes up each morning bright,<br>
+                            And chases away the dark of night...</p>
+                        </div>
+                        <div class="poem-full hidden">
+                            <p>The sun wakes up each morning bright,<br>
+                            And chases away the dark of night.<br>
+                            It smiles down from the sky so blue,<br>
+                            And warms the earth for me and you.</p>
+
+                            <p>It helps the flowers grow so tall,<br>
+                            And gives us light to play with all.<br>
+                            The sun is like a friend so dear,<br>
+                            That brightens up throughout the year.</p>
+
+                            <p>When clouds come out to play and hide<br>
+                            The sun just waits there by their side.<br>
+                            And when the clouds have had their fun,<br>
+                            Out comes our friend, the golden sun!</p>
+                        </div>
+                        <div class="poem-tags">
+                            <span class="tag">Sun</span>
+                            <span class="tag">Nature</span>
+                            <span class="tag">Warmth</span>
+                        </div>
+                    </div>
+                    <div class="poem-actions">
+                        <button class="read-btn">📖 Read Full Poem</button>
+                    </div>
+                </article>
+
+                <!-- Adventure Poems -->
+                <article class="poem-card" data-category="adventure" role="button" tabindex="0" aria-label="Read The Swing poem">
+                    <div class="poem-header">
+                        <div class="poem-icon">🌳</div>
+                        <div class="poem-category">Adventure</div>
+                    </div>
+                    <div class="poem-content">
+                        <h3 class="poem-title">The Swing</h3>
+                        <p class="poem-author">by Robert Louis Stevenson</p>
+                        <div class="poem-preview">
+                            <p>How do you like to go up in a swing,<br>
+                            Up in the air so blue?...</p>
+                        </div>
+                        <div class="poem-full hidden">
+                            <p>How do you like to go up in a swing,<br>
+                            Up in the air so blue?<br>
+                            Oh, I do think it the pleasantest thing<br>
+                            Ever a child can do!</p>
+
+                            <p>Up in the air and over the wall,<br>
+                            Till I can see so wide,<br>
+                            Rivers and trees and cattle and all<br>
+                            Over the countryside—</p>
+
+                            <p>Till I look down on the garden green,<br>
+                            Down on the roof so brown—<br>
+                            Up in the air I go flying again,<br>
+                            Up in the air and down!</p>
+                        </div>
+                        <div class="poem-tags">
+                            <span class="tag">Play</span>
+                            <span class="tag">Adventure</span>
+                            <span class="tag">Fun</span>
+                        </div>
+                    </div>
+                    <div class="poem-actions">
+                        <button class="read-btn">📖 Read Full Poem</button>
+                    </div>
+                </article>
+
+                <!-- Animals Poems -->
+                <article class="poem-card" data-category="animals" role="button" tabindex="0" aria-label="Read Little Bo Peep poem">
+                    <div class="poem-header">
+                        <div class="poem-icon">🐑</div>
+                        <div class="poem-category">Animals</div>
+                    </div>
+                    <div class="poem-content">
+                        <h3 class="poem-title">Little Bo Peep</h3>
+                        <p class="poem-author">Traditional Nursery Rhyme</p>
+                        <div class="poem-preview">
+                            <p>Little Bo Peep has lost her sheep,<br>
+                            And doesn't know where to find them...</p>
+                        </div>
+                        <div class="poem-full hidden">
+                            <p>Little Bo Peep has lost her sheep,<br>
+                            And doesn't know where to find them;<br>
+                            Leave them alone, and they'll come home,<br>
+                            Wagging their tails behind them.</p>
+
+                            <p>Little Bo Peep fell fast asleep,<br>
+                            And dreamt she heard them bleating;<br>
+                            But when she awoke, she found it a joke,<br>
+                            For they were still all fleeting.</p>
+
+                            <p>Then up she took her little crook,<br>
+                            Determined for to find them;<br>
+                            She found them indeed, but it made her heart bleed,<br>
+                            For they'd left their tails behind them.</p>
+                        </div>
+                        <div class="poem-tags">
+                            <span class="tag">Animals</span>
+                            <span class="tag">Sheep</span>
+                            <span class="tag">Nursery Rhyme</span>
+                        </div>
+                    </div>
+                    <div class="poem-actions">
+                        <button class="read-btn">📖 Read Full Poem</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Poetry Stats Section -->
+        <section class="stats-section">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">12+</div>
+                    <div class="stat-label">Beautiful Poems</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Categories</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Famous Authors</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Imagination</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Poem Modal -->
+    <div class="poem-modal hidden" id="poem-modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close poem">&times;</button>
+            <div class="modal-header">
+                <h2 class="modal-title" id="modal-title"></h2>
+                <p class="modal-author"></p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-poem-content"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn favorite-btn">💖 Add to Favorites</button>
+                <button class="modal-btn share-btn">📤 Share Poem</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screen Reader Only Content -->
+    <div class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

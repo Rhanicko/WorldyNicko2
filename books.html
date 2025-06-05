@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our collection of children's stories at Wordly - Interactive educational stories for kids">
+    <meta name="keywords" content="children stories, kids books, educational stories, interactive learning">
+    <title>Wordly - Story Library | Interactive Stories for Kids</title>
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" as="style">
+    
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <link href="story.css" rel="stylesheet">
+    <link href="global.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress"></div>
+    
+    <header>
+        <div class="header-content">
+            <div id="project_details">
+                <img src="img/logo.png" alt="Wordly Logo">
+                <h2>Wordly</h2>
+            </div>
+            <div class="nav-container">
+                <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰ Menu</button>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="books.html" class="active" aria-current="page">Story Books</a></li>
+                        <li><a href="poems.html">Poems</a></li>
+                        <li><a href="phonetics.html">Phonetics</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="story_main">
+        <div id="preloader" class="hidden">
+            <div class="overlay">
+                <video id="preloader-video" src="../preloader.mp4" muted autoplay></video>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">📚 Story Library</h1>
+                <p class="hero-subtitle">Discover magical tales and timeless fables that spark imagination and teach valuable life lessons!</p>
+                <div class="search-container">
+                    <input type="text" id="story-search" placeholder="Search for a story..." aria-label="Search stories">
+                    <div class="search-icon">🔍</div>
+                </div>
+            </div>
+            <div class="floating-elements">
+                <div class="floating-book">📖</div>
+                <div class="floating-star">⭐</div>
+                <div class="floating-heart">💝</div>
+                <div class="floating-rainbow">🌈</div>
+            </div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="filter-section">
+            <div class="filter-container">
+                <h3>Choose Your Adventure:</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">🌟 All Stories</button>
+                    <button class="filter-btn" data-filter="fable">🦊 Fables</button>
+                    <button class="filter-btn" data-filter="adventure">🗺️ Adventures</button>
+                    <button class="filter-btn" data-filter="classic">📜 Classics</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stories Grid -->
+        <section class="stories-section">
+            <div class="stories-container">
+                <div class="story-card" data-url="wolf.html" data-category="fable" role="button" tabindex="0" aria-label="Read The Boy Who Cried Wolf">
+                    <div class="story-image">
+                        <div class="story-emoji">🐺</div>
+                        <div class="story-badge">Fable</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">The Boy Who Cried Wolf</h3>
+                        <p class="story-author">by Aesop</p>
+                        <p class="story-description">A shepherd boy learns the importance of honesty when his false alarms about a wolf lead to real consequences. A timeless tale about trust and truth!</p>
+                        <div class="story-meta">
+                            <span>⏱️ 5 min read</span>
+                            <span>👶 Ages 4-8</span>
+                        </div>
+                        <div class="story-tags">
+                            <span class="tag">Honesty</span>
+                            <span class="tag">Trust</span>
+                            <span class="tag">Consequences</span>
+                        </div>
+                    </div>
+                    <div class="story-overlay">
+                        <button class="read-btn">📖 Read Story</button>
+                    </div>
+                </div>
+
+                <div class="story-card" data-url="sal.html" data-category="adventure" role="button" tabindex="0" aria-label="Read Blueberries for Sal">
+                    <div class="story-image">
+                        <div class="story-emoji">🫐</div>
+                        <div class="story-badge">Adventure</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">Blueberries for Sal</h3>
+                        <p class="story-author">by Robert McCloskey</p>
+                        <p class="story-description">Join Sal and her mother on a berry-picking adventure where she meets an unexpected furry friend. A heartwarming story about nature and family!</p>
+                        <div class="story-meta">
+                            <span>⏱️ 7 min read</span>
+                            <span>👶 Ages 3-7</span>
+                        </div>
+                        <div class="story-tags">
+                            <span class="tag">Nature</span>
+                            <span class="tag">Family</span>
+                            <span class="tag">Adventure</span>
+                        </div>
+                    </div>
+                    <div class="story-overlay">
+                        <button class="read-btn">📖 Read Story</button>
+                    </div>
+                </div>
+
+                <div class="story-card" data-url="milkmaid.html" data-category="fable" role="button" tabindex="0" aria-label="Read The Milkmaid and Her Pail">
+                    <div class="story-image">
+                        <div class="story-emoji">🥛</div>
+                        <div class="story-badge">Fable</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">The Milkmaid and Her Pail</h3>
+                        <p class="story-author">by Aesop</p>
+                        <p class="story-description">A young milkmaid learns about the dangers of counting chickens before they hatch in this timeless tale about dreams and reality!</p>
+                        <div class="story-meta">
+                            <span>⏱️ 4 min read</span>
+                            <span>👶 Ages 5-9</span>
+                        </div>
+                        <div class="story-tags">
+                            <span class="tag">Planning</span>
+                            <span class="tag">Dreams</span>
+                            <span class="tag">Reality</span>
+                        </div>
+                    </div>
+                    <div class="story-overlay">
+                        <button class="read-btn">📖 Read Story</button>
+                    </div>
+                </div>
+
+                <div class="story-card" data-url="fox.html" data-category="fable" role="button" tabindex="0" aria-label="Read The Clever Fox">
+                    <div class="story-image">
+                        <div class="story-emoji">🦊</div>
+                        <div class="story-badge">Fable</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">The Clever Fox</h3>
+                        <p class="story-author">by Arun George</p>
+                        <p class="story-description">Watch as a cunning fox uses flattery to trick a proud crow in this clever tale about vanity and wisdom. Learn about being careful with praise!</p>
+                        <div class="story-meta">
+                            <span>⏱️ 6 min read</span>
+                            <span>👶 Ages 4-8</span>
+                        </div>
+                        <div class="story-tags">
+                            <span class="tag">Cleverness</span>
+                            <span class="tag">Pride</span>
+                            <span class="tag">Wisdom</span>
+                        </div>
+                    </div>
+                    <div class="story-overlay">
+                        <button class="read-btn">📖 Read Story</button>
+                    </div>
+                </div>
+
+                <!-- Coming Soon Cards -->
+                <div class="story-card coming-soon" role="button" tabindex="0" aria-label="The Three Little Pigs - Coming Soon">
+                    <div class="story-image">
+                        <div class="story-emoji">🐷</div>
+                        <div class="story-badge">Coming Soon</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">The Three Little Pigs</h3>
+                        <p class="story-author">Traditional Tale</p>
+                        <p class="story-description">Three little pigs build houses of different materials to protect themselves from the big bad wolf. A story about hard work and preparation!</p>
+                        <div class="story-meta">
+                            <span>⏱️ 8 min read</span>
+                            <span>👶 Ages 3-7</span>
+                        </div>
+                        <div class="story-tags">
+                            <span class="tag">Hard Work</span>
+                            <span class="tag">Safety</span>
+                        </div>
+                    </div>
+                    <div class="story-overlay">
+                        <button class="read-btn disabled">🔒 Coming Soon</button>
+                    </div>
+                </div>
+
+                <div class="story-card coming-soon" role="button" tabindex="0" aria-label="The Princess and the Pea - Coming Soon">
+                    <div class="story-image">
+                        <div class="story-emoji">👑</div>
+                        <div class="story-badge">Coming Soon</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">The Princess and the Pea</h3>
+                        <p class="story-author">by Hans Christian Andersen</p>
+                        <p class="story-description">A tale about a real princess who can feel a pea through twenty mattresses. A magical story about sensitivity and truth!</p>
+                        <div class="story-meta">
+                            <span>⏱️ 6 min read</span>
+                            <span>👶 Ages 4-9</span>
+                        </div>
+                        <div class="story-tags">
+                            <span class="tag">Magic</span>
+                            <span class="tag">Truth</span>
+                        </div>
+                    </div>
+                    <div class="story-overlay">
+                        <button class="read-btn disabled">🔒 Coming Soon</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Amazing Stories</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Classic Fables</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5-7</div>
+                    <div class="stat-label">Minutes Each</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Fun & Learning</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Screen Reader Only Content -->
+    <div class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

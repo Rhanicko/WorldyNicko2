@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn animal pronunciations with Wordly's interactive phonetics guide - Fun alphabet learning for kids">
+    <meta name="keywords" content="phonetics, alphabet, animals, pronunciation, kids learning, educational">
+    <title>Wordly - Interactive Animal Phonetics | Learn the Alphabet</title>
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" as="style">
+    
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="phonetics.css">
+</head>
+<body>
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress"></div>
+    
+    <header>
+        <div class="header-content">
+            <div id="project_details">
+                <img src="img/logo.png" alt="Wordly Logo">
+                <h2>Wordly</h2>
+            </div>
+            <div class="nav-container">
+                <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰ Menu</button>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="books.html">Story Books</a></li>
+                        <li><a href="poems.html">Poems</a></li>
+                        <li><a href="phonetics.html" class="active" aria-current="page">Phonetics</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="phonetics_main">
+        <div id="preloader" class="hidden">
+            <div class="overlay">
+                <video id="preloader-video" src="preloader.mp4" muted autoplay></video>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="phonetics-hero">
+            <div class="hero-content">
+                <h1 class="hero-title">🔤 Animal Alphabet Adventure</h1>
+                <p class="hero-subtitle">Learn letters and sounds with our amazing animal friends! Click on any animal to hear how to say their name.</p>
+                <div class="hero-stats">
+                    <div class="stat-badge">
+                        <span class="stat-number">26</span>
+                        <span class="stat-label">Animals</span>
+                    </div>
+                    <div class="stat-badge">
+                        <span class="stat-number">A-Z</span>
+                        <span class="stat-label">Letters</span>
+                    </div>
+                    <!-- <div class="stat-badge">
+                        <span class="stat-number">🎵</span>
+                        <span class="stat-label">Sounds</span>
+                    </div> -->
+                </div>
+            </div>
+            <div class="floating-letters">
+                <div class="floating-letter">A</div>
+                <div class="floating-letter">B</div>
+                <div class="floating-letter">C</div>
+                <div class="floating-letter">Z</div>
+            </div>
+        </section>
+
+        <!-- Animals Grid -->
+        <section class="animals-section">
+            <div class="animals-container">
+                <div class="animal-card" data-letter="A" data-animal="alligator" role="button" tabindex="0" aria-label="Learn about Alligator">
+                    <div class="animal-letter">A</div>
+                    <div class="animal-image">
+                        <img src="img/alligator.png" alt="Alligator" loading="lazy">
+                        <!-- <div class="play-button">🔊</div> -->
+                    </div>
+                    <div class="animal-info">
+                        <h3 class="animal-name">Alligator</h3>
+                        <p class="animal-pronunciation">al-li-ga-tor</p>
+                        <div class="pronunciation-syllables">
+                            <span class="syllable">al</span>
+                            <span class="syllable">li</span>
+                            <span class="syllable">ga</span>
+                            <span class="syllable">tor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animal-card" data-letter="B" data-animal="butterfly" role="button" tabindex="0" aria-label="Learn about Butterfly">
+                    <div class="animal-letter">B</div>
+                    <div class="animal-image">
+                        <img src="img/butterfly.png" alt="Butterfly" loading="lazy">
+                       <!-- <div class="play-button">🔊</div> -->
+                    </div>
+                    <div class="animal-info">
+                        <h3 class="animal-name">Butterfly</h3>
+                        <p class="animal-pronunciation">but-ter-fly</p>
+                        <div class="pronunciation-syllables">
+                            <span class="syllable">but</span>
+                            <span class="syllable">ter</span>
+                            <span class="syllable">fly</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animal-card" data-letter="C" data-animal="cat" role="button" tabindex="0" aria-label="Learn about Cat">
+                    <div class="animal-letter">C</div>
+                    <div class="animal-image">
+                        <img src="img/cat.png" alt="Cat" loading="lazy">
+                        <!-- <div class="play-button">🔊</div> -->
+                    </div>
+                    <div class="animal-info">
+                        <h3 class="animal-name">Cat</h3>
+                        <p class="animal-pronunciation">cat</p>
+                        <div class="pronunciation-syllables">
+                            <span class="syllable">cat</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animal-card" data-letter="D" data-animal="duck" role="button" tabindex="0" aria-label="Learn about Duck">
+                    <div class="animal-letter">D</div>
+                    <div class="animal-image">
+                        <img src="img/duck.png" alt="Duck" loading="lazy">
+                        <!-- <div class="play-button">🔊</div> -->
+                    </div>
+                    <div class="animal-info">
+                        <h3 class="animal-name">Duck</h3>
+                        <p class="animal-pronunciation">duck</p>
+                        <div class="pronunciation-syllables">
+                            <span class="syllable">duck</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animal-card" data-letter="E" data-animal="elephant" role="button" tabindex="0" aria-label="Learn about Elephant">
+                    <div class="animal-letter">E</div>
+                    <div class="animal-image">
+                        <img src="img/elephant.png" alt="Elephant" loading="lazy">
+                        <!-- <div class="play-button">🔊</div> -->
+                    </div>
+                    <div class="animal-info">
+                        <h3 class="animal-name">Elephant</h3>
+                        <p class="animal-pronunciation">el-e-phant</p>
+                        <div class="pronunciation-syllables">
+                            <span class="syllable">el</span>
+                            <span class="syllable">e</span>
+                            <span class="syllable">phant</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animal-card" data-letter="F" data-animal="frog" role="button" tabindex="0" aria-label="Learn about Frog">
+                    <div class="animal-letter">F</div>
+                    <div class="animal-image">
+                        <img src="img/frog.png" alt="Frog" loading="lazy">
+                        <!-- <div class="play-button">🔊</div> -->
+                    </div>
+                    <div class="animal-info">
+                        <h3 class="animal-name">Frog</h3>
+                        <p class="animal-pronunciation">frog</p>
+                        <div class="pronunciation-syllables">
+                            <span class="syllable">frog</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animal-card" data-letter="G" data-animal="giraffe" role="button" tabindex="0" aria-label="Learn about Giraffe">
+                    <div class="animal-letter">G</div>
+                    <div class="animal-image">
+                        <img src="img/giraffe.png" alt="Giraffe" loading="lazy">
+                        <!-- <div class="play-button">🔊</div> -->
+                    </div>
+                    <div class="animal-info">
+                        <h3 class="animal-name">Giraffe</h3>
+                        <p class="animal-pronunciation">ji-raffe</p>
+                        <div class="pronunciation-syllables">
+                            <span class="syllable">ji</span>
+                            <span class="syllable">raffe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animal-card" data-letter="H" data-animal="horse" role="button" tabindex="0" aria-label="Learn about Horse">
+                    <div class="animal-letter">H</div>
+                    <div class="animal-image">
+                        <img src="img/horse.png" alt="Horse" loading="lazy">
+                        <!-- <div class="play-button">🔊</div> -->
+                    </div>
+                    <div class="animal-info">
+                        <h3 class="animal-name">Horse</h3>
+                        <p class="animal-pronunciation">horse</p>
+                        <div class="pronunciation-syllables">
+                            <span class="syllable">horse</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animal-card" data-letter="I" data-animal="iguana" role="button" tabindex="0" aria-label="Learn about Iguana">
+                    <div class="animal-letter">I</div>
+                    <div class="animal-image">
+                        <img src="img/iguana.png" alt="Iguana" loading="lazy">
+                        <!-- <div class="play-button">🔊</div> -->
+                    </div>
+                    <div class="animal-info">
+                        <h3 class="animal-name">Iguana</h3>
+                        <p class="animal-pronunciation">i-gua-na</p>
+                        <div class="pronunciation-syllables">
+                            <span class="syllable">i</span>
+                            <span class="syllable">gua</span>
+                            <span class="syllable">na</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animal-card" data-letter="J" data-animal="jellyfish" role="button" tabindex="0" aria-label="Learn about Jellyfish">
+                    <div class="animal-letter">J</div>
+                    <div class="animal-image">
+                        <img src="img/jellyfish.png" alt="Jellyfish" loading="lazy">
+                        <!-- <div class="play-button">🔊</div> -->
+                    </div>
+                    <div class="animal-info">
+                        <h3 class="animal-name">Jellyfish</h3>
+                        <p class="animal-pronunciation">jel-ly-fish</p>
+                        <div class="pronunciation-syllables">
+                            <span class="syllable">jel</span>
+                            <span class="syllable">ly</span>
+                            <span class="syllable">fish</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animal-card" data-letter="K" data-animal="kangaroo" role="button" tabindex="0" aria-label="Learn about Kangaroo">
+                    <div class="animal-letter">K</div>
+                    <div class="animal-image">
+                        <img src="img/kangaroo.png" alt="Kangaroo" loading="lazy">
+                        <!-- <div class="play-button">🔊</div> -->
+                    </div>
+                    <div class="animal-info">
+                        <h3 class="animal-name">Kangaroo</h3>
+                        <p class="animal-pronunciation">kan-ga-roo</p>
+                        <div class="pronunciation-syllables">
+                            <span class="syllable">kan</span>
+                            <span class="syllable">ga</span>
+                            <span class="syllable">roo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animal-card" data-letter="L" data-animal="lion" role="button" tabindex="0" aria-label="Learn about Lion">
+                    <div class="animal-letter">L</div>
+                    <div class="animal-image">
+                        <img src="img/lion.png" alt="Lion" loading="lazy">
+                        <!-- <div class="play-button">🔊</div> -->
+                    </div>
+                    <div class="animal-info">
+                        <h3 class="animal-name">Lion</h3>
+                        <p class="animal-pronunciation">li-on</p>
+                        <div class="pronunciation-syllables">
+                            <span class="syllable">li</span>
+                            <span class="syllable">on</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animal-card" data-letter="M" data-animal="monkey" role="button" tabindex="0" aria-label="Learn about Monkey">
+                    <div class="animal-letter">M</div>
+                    <div class="animal-image">
+                        <img src="img/monkey.png" alt="Monkey" loading="lazy">
+                        <!-- <div class="play-button">🔊</div> -->
+                    </div>
+                    <div class="animal-info">
+                        <h3 class="animal-name">Monkey</h3>
+                        <p class="animal-pronunciation">mon-key</p>
+                        <div class="pronunciation-syllables">
+                            <span class="syllable">mon</span>
+                            <span class="syllable">key</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animal-card" data-letter="N" data-animal="nightingale" role="button" tabindex="0" aria-label="Learn about Nightingale">
+                    <div class="animal-letter">N</div>
+                    <div class="animal-image">
+                        <img src="img/nightingale.png" alt="Nightingale" loading="lazy">
+                        <!-- <div class="play-button">🔊</div> -->
+                    </div>
+                    <div class="animal-info">
+                        <h3 class="animal-name">Nightingale</h3>
+                        <p class="animal-pronunciation">night-in-gale</p>
+                        <div class="pronunciation-syllables">
+                            <span class="syllable">night</span>
+                            <span class="syllable">in</span>
+                            <span class="syllable">gale</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animal-card" data-letter="O" data-animal="ostrich" role="button" tabindex="0" aria-label="Learn about Ostrich">
+                    <div class="animal-letter">O</div>
+                    <div class="animal-image">
+                        <img src="img/ostrich.png" alt="Ostrich" loading="lazy">
+                        <!-- <div class="play-button">🔊</div> -->
+                    </div>
+                    <div class="animal-info">
+                        <h3 class="animal-name">Ostrich</h3>
+                        <p class="animal-pronunciation">os-trich</p>
+                        <div class="pronunciation-syllables">
+                            <span class="syllable">os</span>
+                            <span class="syllable">trich</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animal-card" data-letter="P" data-animal="panda" role="button" tabindex="0" aria-label="Learn about Panda">
+                    <div class="animal-letter">P</div>
+                    <div class="animal-image">
+                        <img src="img/panda.png" alt="Panda" loading="lazy">
+                        <!-- <div class="play-button">🔊</div> -->
+                    </div>
+                    <div class="animal-info">
+                        <h3 class="animal-name">Panda</h3>
+                        <p class="animal-pronunciation">pan-da</p>
+                        <div class="pronunciation-syllables">
+                            <span class="syllable">pan</span>
+                            <span class="syllable">da</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animal-card" data-letter="Q" data-animal="quail" role="button" tabindex="0" aria-label="Learn about Quail">
+                    <div class="animal-letter">Q</div>
+                    <div class="animal-image">
+                        <img src="img/quail.png" alt="Quail" loading="lazy">
+                        <!-- <div class="play-button">🔊</div> -->
+                    </div>
+                    <div class="animal-info">
+                        <h3 class="animal-name">Quail</h3>
+                        <p class="animal-pronunciation">quail</p>
+                        <div class="pronunciation-syllables">
+                            <span class="syllable">quail</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animal-card" data-letter="R" data-animal="rabbit" role="button" tabindex="0" aria-label="Learn about Rabbit">
+                    <div class="animal-letter">R</div>
+                    <div class="animal-image">
+                        <img src="img/rabbit.png" alt="Rabbit" loading="lazy">
+                        <!-- <div class="play-button">🔊</div> -->
+                    </div>
+                    <div class="animal-info">
+                        <h3 class="animal-name">Rabbit</h3>
+                        <p class="animal-pronunciation">rab-bit</p>
+                        <div class="pronunciation-syllables">
+                            <span class="syllable">rab</span>
+                            <span class="syllable">bit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animal-card" data-letter="S" data-animal="starfish" role="button" tabindex="0" aria-label="Learn about Starfish">
+                    <div class="animal-letter">S</div>
+                    <div class="animal-image">
+                        <img src="img/starfish.png" alt="Starfish" loading="lazy">
+                        <!-- <div class="play-button">🔊</div> -->
+                    </div>
+                    <div class="animal-info">
+                        <h3 class="animal-name">Starfish</h3>
+                        <p class="animal-pronunciation">star-fish</p>
+                        <div class="pronunciation-syllables">
+                            <span class="syllable">star</span>
+                            <span class="syllable">fish</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animal-card" data-letter="T" data-animal="tiger" role="button" tabindex="0" aria-label="Learn about Tiger">
+                    <div class="animal-letter">T</div>
+                    <div class="animal-image">
+                        <img src="img/tiger.png" alt="Tiger" loading="lazy">
+                        <!-- <div class="play-button">🔊</div> -->
+                    </div>
+                    <div class="animal-info">
+                        <h3 class="animal-name">Tiger</h3>
+                        <p class="animal-pronunciation">ti-ger</p>
+                        <div class="pronunciation-syllables">
+                            <span class="syllable">ti</span>
+                            <span class="syllable">ger</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animal-card" data-letter="U" data-animal="ural-owl" role="button" tabindex="0" aria-label="Learn about Ural Owl">
+                    <div class="animal-letter">U</div>
+                    <div class="animal-image">
+                        <img src="img/ural-owl.png" alt="Ural Owl" loading="lazy">
+                        <!-- <div class="play-button">🔊</div> -->
+                    </div>
+                    <div class="animal-info">
+                        <h3 class="animal-name">Ural Owl</h3>
+                        <p class="animal-pronunciation">u-ral owl</p>
+                        <div class="pronunciation-syllables">
+                            <span class="syllable">u</span>
+                            <span class="syllable">ral</span>
+                            <span class="syllable">owl</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animal-card" data-letter="V" data-animal="vulture" role="button" tabindex="0" aria-label="Learn about Vulture">
+                    <div class="animal-letter">V</div>
+                    <div class="animal-image">
+                        <img src="img/vulture.png" alt="Vulture" loading="lazy">
+                        <!-- <div class="play-button">🔊</div> -->
+                    </div>
+                    <div class="animal-info">
+                        <h3 class="animal-name">Vulture</h3>
+                        <p class="animal-pronunciation">vul-ture</p>
+                        <div class="pronunciation-syllables">
+                            <span class="syllable">vul</span>
+                            <span class="syllable">ture</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animal-card" data-letter="W" data-animal="wolf" role="button" tabindex="0" aria-label="Learn about Wolf">
+                    <div class="animal-letter">W</div>
+                    <div class="animal-image">
+                        <img src="img/wolf.png" alt="Wolf" loading="lazy">
+                        <!-- <div class="play-button">🔊</div> -->
+                    </div>
+                    <div class="animal-info">
+                        <h3 class="animal-name">Wolf</h3>
+                        <p class="animal-pronunciation">wolf</p>
+                        <div class="pronunciation-syllables">
+                            <span class="syllable">wolf</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animal-card" data-letter="X" data-animal="xray-fish" role="button" tabindex="0" aria-label="Learn about X-ray Fish">
+                    <div class="animal-letter">X</div>
+                    <div class="animal-image">
+                        <img src="img/xray-fish.jpg" alt="X-ray Fish" loading="lazy">
+                        <!-- <div class="play-button">🔊</div> -->
+                    </div>
+                    <div class="animal-info">
+                        <h3 class="animal-name">X-ray Fish</h3>
+                        <p class="animal-pronunciation">x-ray fish</p>
+                        <div class="pronunciation-syllables">
+                            <span class="syllable">x</span>
+                            <span class="syllable">ray</span>
+                            <span class="syllable">fish</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animal-card" data-letter="Y" data-animal="yak" role="button" tabindex="0" aria-label="Learn about Yak">
+                    <div class="animal-letter">Y</div>
+                    <div class="animal-image">
+                        <img src="img/yak.png" alt="Yak" loading="lazy">
+                        <!-- <div class="play-button">🔊</div> -->
+                    </div>
+                    <div class="animal-info">
+                        <h3 class="animal-name">Yak</h3>
+                        <p class="animal-pronunciation">yak</p>
+                        <div class="pronunciation-syllables">
+                            <span class="syllable">yak</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animal-card" data-letter="Z" data-animal="zebra" role="button" tabindex="0" aria-label="Learn about Zebra">
+                    <div class="animal-letter">Z</div>
+                    <div class="animal-image">
+                        <img src="img/zebra.png" alt="Zebra" loading="lazy">
+                        <!-- <div class="play-button">🔊</div> -->
+                    </div>
+                    <div class="animal-info">
+                        <h3 class="animal-name">Zebra</h3>
+                        <p class="animal-pronunciation">ze-bra</p>
+                        <div class="pronunciation-syllables">
+                            <span class="syllable">ze</span>
+                            <span class="syllable">bra</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Screen Reader Only Content -->
+    <div class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
